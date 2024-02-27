@@ -1,3 +1,4 @@
+import time
 from random import *
 def calculator_temperature():
     c = int(input("Введите температуру в градусах Цельсия: "))
@@ -63,8 +64,22 @@ def palindrom_check():
     if s[0] == s[a-1] and s[1] == s[a-2] and s[2] == s[a-3]:
         print("PALINDROME TRUE")
 
+def random_number():
+    print("Загадываю число...")
+    time.sleep(3)
+    a = randint(1, 100)
+    n = int(input("Угадай число: "))
 
-
+    while True:
+        if n < a:
+            print("Загаданное число больше")
+            n = int(input("Продолжай пытаться угадать! - "))
+        elif  n > a:
+            print("Загаданное число меньше")
+            n = int(input("Попытка - не пытка! - "))
+        elif n == a:
+            print("Ты победил!")
+            break
 
 while True:
     print("""
@@ -104,7 +119,7 @@ while True:
         simple_num_check()
 
     elif choose == "8":
-        ...
+        random_number()
 
     elif choose == "9":
         reverse_str()
