@@ -80,37 +80,41 @@ while True:
     10. Проверка на палиндром:
     """)
 
-    choose = int(input())
+    choose = input()
 
-    if choose == 1:
+    if choose == "1":
         calculator_temperature()
 
-    elif choose == 2:
+    elif choose == "2":
         chetnost()
 
-    elif choose == 3:
+    elif choose == "3":
         discount_calc()
 
-    elif choose == 4:
+    elif choose == "4":
         umnozhenie()
 
-    elif choose == 5:
+    elif choose == "5":
         max_number()
 
-    elif choose == 6:
+    elif choose == "6":
         factorial_calc()
 
-    elif choose == 7:
+    elif choose == "7":
         simple_num_check()
 
-    elif choose == 8:
+    elif choose == "8":
         ...
 
-    elif choose == 9:
+    elif choose == "9":
         reverse_str()
 
-    elif choose == 10:
+    elif choose == "10":
         palindrom_check()
 
-    elif choose == 0:
+    elif choose == "0":
         break
+
+    else:
+        print("Выберите значение из представленного списка")
+        continue
