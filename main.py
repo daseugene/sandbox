@@ -1,5 +1,6 @@
 import time
 from random import *
+import math
 def calculator_temperature():
     c = int(input("Введите температуру в градусах Цельсия: "))
     print(((c * (9/5))+32),"•F")
@@ -42,13 +43,17 @@ def factorial_calc():
     print("Factorial is :", j)
 
 def simple_num_check():
-    n = int(input())
-    d = 3
-    if n % 2 != 0 and n % n == 0:
-        print("Число простое")
-    else:
-        print("NO")
+    n = int(input("Введите число: "))
+    num_lst = []
 
+    for i in range(2, n+1):
+        for j in range(2, i):
+            if i % j == 0:
+                break
+                print("Число не является простым")
+        else:
+            num_lst.append(i)
+    print('Число простое')
 def reverse_str():
     s = input()
     reversed_word = list(s)
@@ -57,12 +62,12 @@ def reverse_str():
     print(result)
 
 def palindrom_check():
+    s = input("Введите строку: ")
+    if s == s[::-1]:
+        print("Палиндром найден - ", s)
+    else:
+        print("Не палиндром")
 
-    s = list(input().split())
-    a = len(s)
-
-    if s[0] == s[a-1] and s[1] == s[a-2] and s[2] == s[a-3]:
-        print("PALINDROME TRUE")
 
 def random_number():
     print("Загадываю число...")
